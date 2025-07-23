@@ -67,6 +67,7 @@ def form_page():
         auditor_emp_id = st.text_input("Auditor Emp ID")
         auditor_emp_name = st.text_input("Auditor Emp Name")
 
+    from PIL import Image
         submit = st.form_submit_button("Submit")
         if submit:
             new_data = pd.DataFrame([[
