@@ -67,7 +67,7 @@ def form_page():
         auditor_emp_id = st.text_input("Auditor Emp ID")
         auditor_emp_name = st.text_input("Auditor Emp Name")
 
-       submit = st.form_submit_button("Submit")
+        submit = st.form_submit_button("Submit")
         if submit:
             new_data = pd.DataFrame([[
                 today, emp_id, emp_name, project, category,
