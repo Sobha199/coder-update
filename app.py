@@ -3,6 +3,14 @@ import pandas as pd
 from datetime import datetime
 from PIL import Image
 
+# Define form headers at the top
+form_headers = [
+    "Date", "Emp ID", "Emp Name", "Project", "Project Category", 
+    "Login ID", "Login Name", "Team Lead Name", "Chart ID", "Page No", 
+    "No of DOS", "No of Codes", "Error Type", "Error Comments", 
+    "No of Errors", "Chart Status", "Auditor Emp ID", "Auditor Emp Name"
+]
+
 # Load login credentials
 login_df = pd.read_csv("login_coder.csv")
 logo = Image.open("s2m-logo.png")
