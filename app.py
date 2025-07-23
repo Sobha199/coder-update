@@ -83,12 +83,7 @@ def form_page():
                 dos, codes, error_type, error_comments,
                 no_of_errors, chart_status, auditor_emp_id, auditor_emp_name
             ]], columns=form_headers)
-                from openpyxl import load_workbook
-    book = load_workbook("data.xlsx")
-    sheet = book.active
-    for row in new_data.values:
-        sheet.append(list(row))
-    book.save("data.xlsx")
+            new_data.to_csv("data.csv", mode="a", header=False, index=False)
             st.success("Data submitted successfully!")
 
 def dashboard_page():
